@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Data Mahasiswa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3e8ff, #fdf2f8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+        .hasil-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 450px;
+            border: 2px solid #d8b4fe;
+            box-shadow: 0 8px 20px rgba(180, 130, 255, 0.25);
+        }
+        h2 {
+            color: #7e22ce;
+            text-align: center;
+        }
+        p strong {
+            color: #6d28d9;
+        }
+        .back {
+            display: inline-block;
+            background-color: #a855f7;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        .back:hover {
+            background-color: #9333ea;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hasil-box">
+        <h2>🎓 Hasil Data Mahasiswa 🎓</h2>
+        <p><strong>Nama:</strong> <span id="nama"></span></p>
+        <p><strong>Jenis Kelamin:</strong> <span id="kelamin"></span></p>
+        <p><strong>Jurusan:</strong> <span id="jurusan"></span></p>
+        <p><strong>Mata Kuliah Dipilih:</strong> <span id="matkul"></span></p>
+        <a href="Data_mahasiswa1_lab3.html" class="back">⬅ Kembali ke Form</a>
+    </div>
+
+    <script>
+        // Mengambil data dari URL (tanpa backend)
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("nama").textContent = params.get("nama") || "-";
+        document.getElementById("kelamin").textContent = params.get("kelamin") || "-";
+        document.getElementById("jurusan").textContent = params.get("jurusan") || "-";
+        document.getElementById("matkul").textContent = params.getAll("matkul").join(", ") || "-";
+    </script>
+</body>
+</html>
