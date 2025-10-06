@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Mahasiswa - Tema Ungu Pastel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e9d5ff, #fce7f3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        form {
+            background-color: white;
+            padding: 25px;
+            width: 420px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(180, 130, 255, 0.25);
+            border: 2px solid #d8b4fe;
+        }
+        legend {
+            color: #7e22ce;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        label {
+            display: inline-block;
+            width: 140px;
+            color: #5b21b6;
+            font-weight: 500;
+        }
+        select, input[type="text"] {
+            width: 220px;
+            padding: 8px;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+        }
+        input[type="radio"] {
+            accent-color: #a855f7;
+        }
+        input[type="submit"] {
+            background-color: #a855f7;
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #9333ea;
+        }
+        fieldset {
+            border: 2px solid #c4b5fd;
+            border-radius: 12px;
+        }
+        .footer-note {
+            margin-top: 25px;
+            color: #6b21a8;
+            font-size: 0.9em;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="Data_mahasiswa2_lab3.html" method="get">
+        <fieldset>
+            <legend>✨ Data Mahasiswa ✨</legend>
+
+            <p>
+                <label for="nama">Nama Mahasiswa</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Lengkap" required>
+            </p>
+
+            <p>
+                <label>Jenis Kelamin</label><br>
+                <input type="radio" id="jk_l" name="kelamin" value="Laki-laki" required>
+                <label for="jk_l">Laki-laki</label>
+                <input type="radio" id="jk_p" name="kelamin" value="Perempuan">
+                <label for="jk_p">Perempuan</label>
+            </p>
+
+            <p>
+                <label for="jurusan">Pilih Jurusan</label><br>
+                <select id="jurusan" name="jurusan">
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                    <option value="Manajemen Informatika">Manajemen Informatika</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="matkul">Pilih Mata Kuliah</label><br>
+                <select id="matkul" name="matkul" multiple size="5">
+                    <option value="Pemrograman Web">Pemrograman Web</option>
+                    <option value="Basis Data">Basis Data</option>
+                    <option value="Jaringan Komputer">Jaringan Komputer</option>
+                    <option value="Algoritma & Pemrograman">Algoritma & Pemrograman</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                </select>
+            </p>
+
+            <p style="text-align: center;">
+                <input type="submit" value="Kirim Data">
+            </p>
+        </fieldset>
+    </form>
+
+    <p class="footer-note">© 2025 Praktikum Pemrograman Web – Nadine Amelia Putri</p>
+
+</body>
+</html>
